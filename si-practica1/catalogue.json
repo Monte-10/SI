@@ -1,0 +1,340 @@
+{
+  "peliculas": [
+    {
+      "id": 1,
+      "titulo": "La guerra de las galaxias: Episodio 1-La amenaza fantasma",
+      "poster": "img/guerraepisodio1.png",
+      "director": "George Lucas",
+      "precio": 18.99,
+      "categoria": "Aventura",
+      "año": 1999,
+      "actores": [
+        {
+          "nombre": "Jake Lloyd",
+          "personaje": "Anakin Skywalker",
+          "foto": "img/anakin.png"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "titulo": "El sexto sentido",
+      "poster": "img/elsextosentido.png",
+      "director": "M. Night Shyamalan",
+      "precio": 18.99,
+      "categoria": "Drama",
+      "año": 1999,
+      "actores": [
+        {
+          "nombre": "Bruce Willis",
+          "personaje": "Dr. Malcolm Crowe",
+          "foto": "img/drmalcolmcrowe.png"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "titulo": "Todo Sobre Mi Madre",
+      "poster": "img/todosobremimadre.png",
+      "director": "Almodobar",
+      "precio": 18.99,
+      "categoria": "Drama",
+      "año": 1999,
+      "actores": [
+        {
+          "nombre": "Penélope Cruz",
+          "personaje": "Hermana Rosa",
+          "foto": "img/penelopecruz.png"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "titulo": "300",
+      "poster": "img/300.png",
+      "director": "Zack Snyder",
+      "precio": 18.99,
+      "categoria": "Acción",
+      "año": 2007,
+      "actores": [
+        {
+          "nombre": "Gerard Butler",
+          "personaje": "Rey Leónidas",
+          "foto": "img/gerardbutler.png"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "titulo": "El silencio de los corderos",
+      "poster": "img/elsilenciodeloscorderos.png",
+      "director": "Jonathan Demme",
+      "precio": 18.99,
+      "categoria": "Drama",
+      "año": 1991,
+      "actores": [
+        {
+          "nombre": "Anthony Hopkins",
+          "personaje": "Hannibal Lecter",
+          "foto": "img/hanniballecter.png"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "titulo": "Forrest Gump",
+      "poster": "img/forrestgump.png",
+      "director": "Robert Zemeckis",
+      "precio": 18.99,
+      "categoria": "Comedia",
+      "año": 1994,
+      "actores": [
+        {
+          "nombre": "Tom Hanks",
+          "personaje": "Forrest Gump",
+          "foto": "img/tomhanks.png"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "titulo": "Las Hurdes",
+      "poster": "img/lashurdes.png",
+      "director": "Luis Buñuel",
+      "precio": 18.99,
+      "categoria": "Documental",
+      "año": 1933,
+      "actores": [
+        {
+          "nombre": "Luis Buñuel",
+          "personaje": "Narrador",
+          "foto": "img/luisbunuel.png"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "titulo": "Avatar",
+      "poster": "img/avatar.png",
+      "director": "James Cameron",
+      "precio": 18.99,
+      "categoria": "Action & Adventure",
+      "año": "2009",
+      "actores": [
+        {
+          "nombre": "Sam Worthington",
+          "personaje": "Jake Sully",
+          "foto": "img/jakesully.png"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "titulo": "I Am Legend",
+      "poster": "img/iamlegend.png",
+      "precio": 18.99,
+      "año": "2007",
+      "categoria": "Sci-fi & fantasy",
+      "director": "Francis Lawrence",
+      "actores": [
+        {
+          "nombre": "Will Smith",
+          "personaje": "Dr.Robert",
+          "foto": "img/drRobert.png"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "titulo": "The Avengers",
+      "poster": "img/theavengers.png",
+      "precio": 18.99,
+      "año": "2012",
+      "categoria": "Sci-fi & fantasy",
+      "director": "Joss Whedon",
+      "actores": [
+        {
+          "nombre": "Chris Evans",
+          "personaje": "Capitan America",
+          "foto": "img/chrisevans.png"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "titulo": "The Wolf of Wall Street",
+      "poster": "img/thewolfofwallstreet.png",
+      "precio": 18.99,
+      "año": "2013",
+      "categoria": "Comedia",
+      "director": "Martin Scorsese",
+      "actores": [
+        {
+          "nombre": "Leonardo DiCaprio",
+          "personaje": "Jordan Belfort",
+          "foto": "img/jordanbelfort.png"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "titulo": "Interstellar",
+      "poster": "img/interstellar.png",
+      "precio": 18.99,
+      "año": "2014",
+      "categoria": "Drama",
+      "director": "Christopher Nolan",
+      "actores": [
+        {
+          "nombre": "Ellen Burstyn",
+          "personaje": "Murph",
+          "foto": "img/murph.png"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "titulo": "Game of Thrones",
+      "poster": "img/gameofthrones.png",
+      "precio": 18.99,
+      "año": "2011",
+      "categoria": "Drama",
+      "director": "Alan Taylor",
+      "actores": [
+        {
+          "nombre": "Emilia Clarke",
+          "personaje": "Daenerys Targaryen",
+          "foto": "img/daenerystargaryen.png"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "titulo": "Vikings",
+      "poster": "img/vikings.png",
+      "precio": 18.99,
+      "año": "2013",
+      "categoria": "Drama",
+      "director": "Michael Hirst",
+      "actores": [
+        {
+          "nombre": "Travis Fimmel",
+          "personaje": "Ragnar",
+          "foto": "img/ragnar.png"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "titulo": "Gotham",
+      "poster": "img/gotham.png",
+      "precio": 18.99,
+      "año": "2014",
+      "categoria": "Crimen",
+      "director": "Bruno Heller",
+      "actores": [
+        {
+          "nombre": "Ben McKenzie",
+          "personaje": "James Gordon",
+          "foto": "img/jamesgordon.png"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "titulo": "Power",
+      "poster": "img/power.png",
+      "precio": 18.99,
+      "año": "2014",
+      "categoria": "Crimen",
+      "director": "Courtney Kemp Agboh",
+      "actores": [
+        {
+          "nombre": "Omari Hardwick",
+          "personaje": "James 'Ghost' St Patrick",
+          "foto": "img/ghost.png"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "titulo": "Narcos",
+      "poster": "img/narcos.png",
+      "precio": 18.99,
+      "año": "2015",
+      "categoria": "Crimen",
+      "director": "Chris Brancato",
+      "actores": [
+        {
+          "nombre": "Wagner Moura",
+          "personaje": "Pablo Escobar",
+          "foto": "img/pabloescobar.png"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "titulo": "Breaking Bad",
+      "poster": "img/breakingbad.png",
+      "precio": 18.99,
+      "año": "2008",
+      "categoria": "Crimen",
+      "director": "Vince Gilligan",
+      "actores": [
+        {
+          "nombre": "Aaron Paul",
+          "personaje": "Jesse Pinkman",
+          "foto": "img/jessepinkman.png"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "titulo": "Doctor Strange",
+      "poster": "img/doctorstrange.png",
+      "precio": 18.99,
+      "año": "2016",
+      "categoria": "Action & Adventure",
+      "director": "Scott Derrickson",
+      "actores": [
+        {
+          "nombre": "Benedict Cumberbatch",
+          "personaje": "Doctor Strange",
+          "foto": "img/doctorstrange_actor.png"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "titulo": "Assassin's Creed",
+      "poster": "img/assassinscreed.png",
+      "precio": 18.99,
+      "año": "2016",
+      "categoria": "Action & Adventure",
+      "director": "Justin Kurzel",
+      "actores": [
+        {
+          "nombre": "Michael Fassbender",
+          "personaje": "Aguilar, Cal Lynch",
+          "foto": "img/callynch.png"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "titulo": "Luke Cage",
+      "poster": "img/lukecage.png",
+      "precio": 18.99,
+      "año": "2016",
+      "categoria": "Crimen",
+      "director": "Cheo Hodari Coker",
+      "actores": [
+        {
+          "nombre": "Mahershala Ali",
+          "personaje": "Cottonmouth",
+          "foto": "img/cottonmouth.png"
+        }
+      ]
+    }
+  ]
+}

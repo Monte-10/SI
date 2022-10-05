@@ -1,0 +1,65 @@
+{% extends "index.html" %}
+{% block title %}Shopping Cart{% endblock title%}
+{% block link %}<script src="{{ url_for('static', filename='js/setMovie.js')}}"></script>{% endblock link %}
+
+{% block header2 %}
+SHOPPING CART
+{% endblock header2 %}
+
+{% block header3 %}
+{% if user %}
+<a href="{{url_for('Historial')}}">HISTORIAL</a>
+{% endif %}
+{% endblock header3 %}
+
+
+{% block content %}
+<div class="cart-container">
+
+    {% for movie in lista %}
+
+    <div class="cart-film">
+
+        <div class="cart-film-image">
+            <img class="film-image" src="{{url_for('static', filename=movie.poster)}}">
+        </div>
+
+
+        <div class="data-film">
+            <p>Titulo: {{movie.titulo}}</p>
+            <p>Precio: {{movie.precio}} €</p>
+        </div>
+
+        <div class="product-number"  id ="product-number_{{movie.id}}">
+            <script>
+                LoadMovieFromId('{{movie.id}}')
+            </script>
+            
+        </div>
+
+        <div class="bin-film">
+            <form class="bin-form" action="/Cart" method="post">
+                <input class="hidden-button" type="text" name="id" value="{{movie.id}}">
+                <input class="bin-image" type="image" src="{{url_for('static', filename='img/papelera.png')}}">
+            </form>
+        </div>
+    </div>
+
+    {% endfor %}
+
+    <div class="finish-button">
+        {% if lista %}
+        {% if user %}
+        <form action="/Success" class="finish-button-form">
+            <input class="finish-buying-button" type="submit" value="Finalizar Compra">
+        </form>
+        {% else %}
+        <form action="/Login" class="finish-button-form">
+            <input class="finish-buying-button" type="submit" value="Finalizar Compra">
+        </form>
+        {% endif%}
+        {% endif%}
+    </div>
+
+</div>
+{% endblock content %}

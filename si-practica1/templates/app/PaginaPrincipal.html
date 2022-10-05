@@ -1,0 +1,44 @@
+{% extends "index.html" %}
+
+{% block title %}Home{% endblock title %}
+
+{% block header2 %}
+FILMS
+{% endblock header2 %}
+
+{% block menu %}
+
+<div class="filter">
+    <form action="/" class="filter-box-form" method="post">
+       <input class="filter-box" type="text" placeholder="Introduzca titulo de la pelicula" name="filtro">
+    </form>
+</div>
+<div class="categories">
+    <h1 class="categories-title">Categorias</h1>
+    <br>
+    <ul class="categories-list">
+        <li><a href="/Drama">Drama</a></li>
+        <li><a href="/Comedia">Comedia</a></li>
+        <li><a href="/Misterio">Misterio</a></li>
+        <li><a href="/Action & adventure">Action & adventure</a></li>
+        <li><a href="/Crimen">Crimen</a></li>
+        <li><a href="/Suspenso">Suspense</a></li>
+        <li><a href="/Sci-fi & fantasy">Sci-fi & fantasy</a></li>
+        <li><a href="/Aventura">Aventura</a></li>
+        <li><a href="/Animacion">Animacion</a></a>
+    </ul>
+</div>
+{% endblock menu %}
+
+{% block content %}
+<div class="all-films">
+    {% for movie in movies %}
+    <div class="films">
+        <a href="{{url_for('Film',id=movie.id)}}"><img class="film-image"
+                src="{{ url_for('static', filename=movie.poster) }}"></a>
+        <br><br>
+        <p>{{movie.titulo}}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}

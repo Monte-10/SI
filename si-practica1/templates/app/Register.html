@@ -1,0 +1,75 @@
+{% extends "index.html"%}
+{% block header1 %}
+{% endblock header1 %}
+{% block header2 %}SIGN UP{% endblock header2 %}
+{% block header3 %}
+{% endblock header3 %}
+
+{% block principal %}
+{% endblock principal %}
+
+{% block content%}
+
+<div class="form">
+
+    <form class="my-form" id="formulario" action="/" method="post">
+
+        <div class="form-group" id = "group_userName">
+            <label>Usuario: </label>
+            <div class="group-input" id="group-input-userName">
+                <input type="text" name="userName" id="userName">
+                <div class="correcto"></div>
+            </div>
+            <p class="formulario__input-error">Debe tener una longitud mayor a 6 caracteres</p>
+        </div>
+        <br><br>
+        <div class="form-group" id="group_password">
+            <label>Contraseña: </label>
+            <div class="group-input" id="group-input-password">
+                <input type="password" name="password" id="password">
+                <div class="correcto"></div>
+            </div>
+            <p class="formulario__input-error">No debe de contener simbolos especiales y debe tener una longitud minima de 8 caracteres</p>
+        </div>
+        <br><br>
+        <div class="form-group" id="group_password2">
+            <label>Confirmar contraseña: </label>
+            <div class="group-input" id="group-input-password2">
+                <input type="password" name="password2" id="password2">
+                <div class="correcto"></div>
+            </div>
+            <p class="formulario__input-error">Las contraseñas deben coincidir</p>
+        </div>
+        <br><br>
+        <div class="form-group" id="group_email">
+            <label>Correo electrónico: </label>
+            <div class="group-input" id="group-input-email">
+                <input type="email" name="email">
+                <div class="correcto"></div>
+            </div>
+            <p class="formulario__input-error">Correo no válido</p>
+        </div>
+        <br><br>
+        <div class="form-group" id="group_creditCard">
+            <label>Tarjeta de Crédito: </label>
+            <div class="group-input" id="group-input-creditCard">
+                <input type="text" name="creditCard">
+                <div class="correcto"></div>
+            </div>
+            <p class="formulario__input-error">Debe de tener 16 digitos del 0 al 9 cada uno</p>
+        </div>
+        <br><br>
+        <div class="form-group" id="group_address">
+            <label>Direccion de envio: </label>
+            <div class="group-input" id="group-input-address">
+                <input type="text" name="address">
+                <div class="correcto"></div>
+            </div>
+            <p class="formulario__input-error">La dirección debe ser contener a 50 caracteres</p>
+        </div>
+        <br><br>
+        <input class="button1" type="submit" value="Submit" onclick="enviarFormulario()">
+    </form>
+    <script src="{{ url_for('static', filename='js/form.js')}}"></script>
+</div>
+{% endblock content%}
