@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock%}
+
+{% block content %}
+    {% for item in movies %}
+    <div class="all-films">
+        <a href="{{url_for('film')}}">
+            <img class="film-image" src="{{url_for('static',filename=item.poster)}}">
+        </a>
+            <br><br>
+            <p>{{item.titulo}}</p>
+    </div>
+    {% endfor %}
+{% endblock content%}
+    
