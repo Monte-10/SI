@@ -6,14 +6,12 @@
     <!-- Uso de url_for para obtener la ruta de elementos de la página -->
     <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='css/si1.css') }}/>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
 
     <!-- ##################### HEADER ######################### -->
     <header id="header">
-
-    <a href="{{ url_for('index') }}" class="titulo header_button">PELIS PA'VER</a>
-    <img src="static/img/dvd.png" alt="Home" width="100" height="100">
     
     <div class="input-box">
         <input type="text" placeholder="Buscar...">
@@ -44,39 +42,58 @@
     
 
     </header>
+    <!-- ##################### ACABA HEADER ######################### -->
 
-    <div class"content">
-        <div>VideoClub:
-            <a href="{{ url_for('index') }}" class="Boton-home">Home</a>
-            {% if not session['usuario'] %}
-            <a href="{{ url_for('login') }}">Sign In</a>
-            <span>Usuario: An&oacute;nimo</span>
-            {% else %}
-            <a href="{{ url_for('logout') }}">Log out</a>
-            <span>Usuario: {{ session['usuario'] }}</span>
-            {% endif%}
-        </div>
 
-        <div class="container">
+    <!-- ##################### BODY ######################### -->
+    <div id="menu">
+		<div class="hamburger">
+			<div class="line"></div>
+			<div class="line"></div>
+			<div class="line"></div>
+		</div>
+		<div class="menu-inner">
+			
+			<ul>
+				<li><a href="{{ url_for('index') }}" class="home header_button">Home</a></li>
 
-            <div class="navigation-menu">
+				<li>
+                    {% if user %}
+                    <a href="/logout" class="logout header_button">{{user}}"Cerrar Sesión</a>
+                    {%else%}
+                    <a href="/login" class="login header_button">Login</a>
+                    {% endif %}
+                </li>
                 
-                {% block principal %}
-                <div class="volver-principal">
-                    <a class="volver" href="/"><img class="home-image" src="{{url_for('static',filename='img/home.png')}}" alt="pagina-principal"></a>
-                </div>
-                {% endblock principal %}
+                {% if user %} 
+                {%else%}
+                <li>
+                    <a href="/register" class="register header_button">Register</a>
+                </li>
+                {% endif %}
                 
-                {% block menu %}
-                {% endblock menu %}
-            </div>
+                <li>Carrito</li>
+                <li>Finalizar Compra</li>
+                <li>{% if user %}
+                    <a href="/historial" class="logout header_button"> img=""{{user}}"Historial</a>
+                    {%else%}
+                    {% endif %}</li></li>
+			</ul>
+		</div>
+        
+        
+		
+		<svg version="1.1" id="blob"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path id="blob-path" d="M60,500H0V0h60c0,0,20,172,20,250S60,900,60,500z"/>
+		</svg>
+	</div>
+    <script src="{{ url_for('static', filename='js/lateralMenu.js')}}"></script>
 
-            <div class="content">
-                {% block content %}
-                {% endblock content %}
-            </div>
-        </div>
+    <div class="container">
+        {%block content%}{%endblock%}
     </div>
+
+    <!-- ##################### ACABA BODY ######################### -->
 
 
     <!-- ##################### FOOTER ######################### -->
@@ -99,6 +116,7 @@
           }
         }
     </script>
-
+    <!-- ##################### ACABA FOOTER ######################### -->
+    
 </body>
 </html>
