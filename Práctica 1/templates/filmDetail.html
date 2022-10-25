@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends "index.html%}
+
+{%block title%}Film {%endblock title%}
+
+{%block content%}
+<div class="film-detail">
+    <div class="film-detail-poster">
+        <img class="film-detail-image" src="{{url_for('static',filename=film.poster)}}")>
+    </div>
+
+    <div class="film-detail-text">
+        <ul>
+            <li>Título: {{movie.titulo}}</li>
+            <li>: {{movie.director}}</li>
+            <li>: {{movie.precio}}</li>
+            <li>: {{movie.}}</li>
+            <li>: {{movie.}}</li>
+            
+            <li>: {{actor.}}</li>
+            <li>: {{actor.}}</li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+{%endblock content%}

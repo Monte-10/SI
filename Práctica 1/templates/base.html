@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}- VideoClub</title>
+    <!-- Uso de url_for para obtener la ruta de elementos de la página -->
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='css/si1.css') }}/>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <!-- ##################### HEADER ######################### -->
+    <header id="header">
+    
+    <div class="input-box">
+        <input type="text" placeholder="Buscar...">
+        <span class="search">
+            <i class="uil uil-search search-icon"></i>
+        </span>
+        <i class="uil uil-times close-icon"></i>
+    </div> 
+
+    <div class="header_buttons">
+        <a href="{{ url_for('index') }}" class="home header_button">HOME</a>
+        {% if user %}
+        <a href="/logout" class="logout header_button">{{user}}"LOGOUT</a>
+        {%else%}
+        <a href="/login" class="login header_button">LOGIN</a>
+        {% endif %}
+    </div>
+
+    <!-- Script barra búsqueda -->
+    <script>
+        let inputBox = document.querySelector(".input-box"),
+            search = document.querySelector(".search"),
+            closeIcon = document.querySelector(".close-icon");
+
+            search.addEventListener("click", () => inputBox.classList.add("open"));
+            closeIcon.addEventListener("click", () => inputBox.classList.remove("open"));
+    </script>
+    
+
+    </header>
+    <!-- ##################### ACABA HEADER ######################### -->
+
+
+    <!-- ##################### BODY ######################### -->
+    <div id="menu">
+		<div class="hamburger">
+			<div class="line"></div>
+			<div class="line"></div>
+			<div class="line"></div>
+		</div>
+		<div class="menu-inner">
+			
+			<ul>
+				<li><a href="{{ url_for('index') }}" class="home header_button">Home</a></li>
+
+				<li>
+                    {% if user %}
+                    <a href="/logout" class="logout header_button">{{user}}"Cerrar Sesión</a>
+                    {%else%}
+                    <a href="/login" class="login header_button">Login</a>
+                    {% endif %}
+                </li>
+                
+                {% if user %} 
+                {%else%}
+                <li>
+                    <a href="/register" class="register header_button">Register</a>
+                </li>
+                {% endif %}
+                
+                <li>Carrito</li>
+                <li>Finalizar Compra</li>
+                <li>{% if user %}
+                    <a href="/historial" class="logout header_button"> img=""{{user}}"Historial</a>
+                    {%else%}
+                    {% endif %}</li></li>
+			</ul>
+		</div>
+        
+        
+		
+		<svg version="1.1" id="blob"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path id="blob-path" d="M60,500H0V0h60c0,0,20,172,20,250S60,900,60,500z"/>
+		</svg>
+	</div>
+    <script src="{{ url_for('static', filename='js/lateralMenu.js')}}"></script>
+
+    <div class="container">
+        {%block content%}{%endblock%}
+    </div>
+
+    <!-- ##################### ACABA BODY ######################### -->
+
+
+    <!-- ##################### FOOTER ######################### -->
+
+    <footer>
+        ©Pelis Pa'Ver Copyright 2022 DvD, Blueray. Todos los derechos reservados.
+    </footer>
+
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var header = document.getElementById("header");
+        var sticky = header.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+          } else {
+            header.classList.remove("sticky");
+          }
+        }
+    </script>
+    <!-- ##################### ACABA FOOTER ######################### -->
+    
+</body>
+</html>

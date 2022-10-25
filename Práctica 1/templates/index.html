@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock%}
+
+{% block content %}
+
+    <!--DROPDOWN MENU-->
+    <div class="sec-center"> 	
+        <input class="dropdown" type="checkbox" id="dropdown" name="dropdown"/>
+        <label class="for-dropdown" for="dropdown">Categorías <i class="uil uil-arrow-down"></i></label>
+        <div class="section-dropdown"> 
+            <a a href="/Accion">Acción<i class="uil uil-arrow-right"></i></a>
+            <a a href="/Animacion">Animación<i class="uil uil-arrow-right"></i></a>      
+            <a a href="/Aventuras">Aventura<i class="uil uil-arrow-right"></i></a>
+            <a a href="/CienciaFiccion">Ciencia-Ficción<i class="uil uil-arrow-right"></i></a>
+            <a a href="/Comedia">Comedia<i class="uil uil-arrow-right"></i></a>
+            <a a href="/Crimen">Crimen<i class="uil uil-arrow-right"></i></a>
+            <a href="/Drama">Drama <i class="uil uil-arrow-right"></i></a>   
+            <a a href="/Misterio">Misterio<i class="uil uil-arrow-right"></i></a>
+            <a a href="/Suspense">Suspense<i class="uil uil-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <!--PELIS-->
+    <div class="all-films">
+        {% for item in movies %}
+        <a href="{{url_for('film',id=item.id)}}" class="film">
+            <div class="film">
+                <img class="film-image" src="{{url_for('static',filename=item.poster)}}">
+                <p>{{item.titulo}}</p>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+
+{% endblock content%}
+    
